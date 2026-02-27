@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fertility Risk Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Fertility Risk Assessment</h1>
+
+<form id="riskForm">
+
+    <label>Age:</label><br>
+    <input type="number" id="age" required><br><br>
+
+    <label>Type of Cancer:</label><br>
+    <select id="cancer">
+        <option value="low">Early Stage</option>
+        <option value="medium">Moderate Stage</option>
+        <option value="high">Aggressive</option>
+    </select><br><br>
+
+    <label>Treatment Type:</label><br>
+    <select id="treatment">
+        <option value="chemo">Chemotherapy</option>
+        <option value="radiation">Radiation</option>
+        <option value="surgery">Surgery Only</option>
+    </select><br><br>
+
+    <label>Are your periods regular?</label><br>
+    <select id="periods">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <button type="button" onclick="calculateRisk()">Check Risk</button>
+
+</form>
+
+<h2 id="result"></h2>
+<p id="advice"></p>
+
+<p class="disclaimer">
+    Disclaimer: This tool provides educational guidance only and is not a medical diagnosis.
+</p>
+
+<script src="script.js"></script>
+</body>
+</html>
