@@ -1,48 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fertility Risk Checker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fertility Risk Checker - HerCan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Fertility Risk Assessment</h1>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="landingpage.html">HerCan</a>
+        <nav class="nav">
+            <a href="landingpage.html">Home</a>
+            <a href="fertilitychecker.html">Assessment</a>
+            <a href="#resources">Resources</a>
+        </nav>
+    </div>
+</header>
 
-<form id="riskForm">
+<main class="container">
 
-    <label>Age:</label><br>
-    <input type="number" id="age" required><br><br>
+    <section class="page-intro">
+        <h1>Fertility Risk Assessment</h1>
+        <p class="lead">A quick, educational tool to help you understand potential fertility risk before cancer treatment. This is not medical advice.</p>
+    </section>
 
-    <label>Type of Cancer:</label><br>
-    <select id="cancer">
-        <option value="low">Early Stage</option>
-        <option value="medium">Moderate Stage</option>
-        <option value="high">Aggressive</option>
-    </select><br><br>
+    <section id="assessment" class="card form-card">
+        <form id="riskForm" novalidate>
 
-    <label>Treatment Type:</label><br>
-    <select id="treatment">
-        <option value="chemo">Chemotherapy</option>
-        <option value="radiation">Radiation</option>
-        <option value="surgery">Surgery Only</option>
-    </select><br><br>
+            <div class="form-row">
+                <label for="age">Age</label>
+                <input type="number" id="age" min="12" max="120" placeholder="e.g. 32" required>
+            </div>
 
-    <label>Are your periods regular?</label><br>
-    <select id="periods">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select><br><br>
+            <div class="form-row">
+                <label for="cancerType">Type of Cancer</label>
+                <select id="cancerType">
+                    <option value="breast">Breast cancer</option>
+                    <option value="blood">Blood cancer (leukemia)</option>
+                    <option value="lymphoma">Lymphoma</option>
+                    <option value="ovarian">Ovarian cancer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
-    <button type="button" onclick="calculateRisk()">Check Risk</button>
+            <div class="form-row">
+                <label for="cancerStage">Stage / Severity</label>
+                <select id="cancerStage">
+                    <option value="low">Low</option>
+                    <option value="medium">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
 
-</form>
+            <div class="form-row">
+                <label for="treatment">Planned Treatment Type</label>
+                <select id="treatment">
+                    <option value="chemo">Chemotherapy</option>
+                    <option value="radiation">Radiation</option>
+                    <option value="surgery">Surgery only</option>
+                </select>
+            </div>
 
-<h2 id="result"></h2>
-<p id="advice"></p>
+            <div class="form-row">
+                <label for="periods">Are your periods regular?</label>
+                <select id="periods">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
 
-<p class="disclaimer">
-    Disclaimer: This tool provides educational guidance only and is not a medical diagnosis.
-</p>
+            <div class="form-row">
+                <label for="amh">AMH level (ng/mL)</label>
+                <input type="number" id="amh" step="0.1" min="0" placeholder="e.g. 2.3">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="checkBtn">Check My Fertility Risk</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section id="results" class="card result-card" aria-live="polite">
+        <h2 id="result">--</h2>
+        <p id="advice"></p>
+        <p class="disclaimer">This tool provides educational guidance only and is not a medical diagnosis. For personalized advice, speak with your oncologist or a fertility specialist.</p>
+    </section>
+
+    <section id="resources" class="card resources">
+        <h3>Next steps & resources</h3>
+        <ul>
+            <li>Contact a fertility preservation clinic for an urgent consultation.</li>
+            <li>Ask your oncologist how treatment might affect ovarian reserve.</li>
+            <li>Learn about egg freezing (oocyte cryopreservation) and other options.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <small>&copy; HerCan — Educational tool. Built with care.</small>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>

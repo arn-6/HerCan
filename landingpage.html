@@ -1,31 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HerCan</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>HerCan — Fertility preservation information & assessment</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="hero">
-    <h1>Protect Your Future Before Cancer Treatment Begins</h1>
-    <p>
-        Cancer treatments like chemotherapy may affect fertility.
-        Learn about your fertility risk and egg preservation options.
-    </p>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="landingpage.html">HerCan</a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="landingpage.html">Home</a>
+            <a href="fertilitychecker.html">Check my risk</a>
+            <a href="#resources">Resources</a>
+        </nav>
+    </div>
+</header>
 
-    <a href="fertilitychecker.html" class="btn">
-        Check My Fertility Risk
-    </a>
-</section>
+<main class="container">
 
-<section class="info">
-    <h2>Why This Matters</h2>
-    <p>
-        Many women are unaware that cancer treatment can impact
-        ovarian reserve and future fertility.
-        Early consultation can help preserve options.
-    </p>
-</section>
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <h1>Protect your fertility before treatment starts</h1>
+                <p class="lead">Cancer treatment can affect ovarian reserve. HerCan helps you understand your options and take early action to preserve future family-building choices.</p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="fertilitychecker.html">Check My Fertility Risk</a>
+                    <a class="btn ghost" href="#resources">Learn More</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <!-- simple illustrative SVG; replace with an image if desired -->
+                <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect rx="16" width="320" height="220" fill="url(#g)" />
+                    <defs>
+                        <linearGradient id="g" x1="0" x2="1">
+                            <stop offset="0" stop-color="#f8cdda" />
+                            <stop offset="1" stop-color="#fbc2eb" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="card features" id="features">
+        <h2>How HerCan helps</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Understand risk</h3>
+                <p class="muted">A quick assessment gives a sense of urgency so you can act before treatment.</p>
+            </div>
+            <div class="feature">
+                <h3>Learn options</h3>
+                <p class="muted">Information about fertility preservation such as egg freezing and fertility counseling.</p>
+            </div>
+            <div class="feature">
+                <h3>Next steps</h3>
+                <p class="muted">Clear, practical steps to contact specialists and make decisions quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card resources" id="resources">
+        <h2>Resources & next steps</h2>
+        <ul>
+            <li>Talk to your oncologist about urgent referral pathways for fertility preservation.</li>
+            <li>Find a local fertility clinic experienced with oncology patients.</li>
+            <li>Read trusted guides on egg freezing and options for younger and older patients.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+            <small>&copy; HerCan — Educational resource.</small>
+            <nav class="nav" aria-label="Footer navigation">
+                <a href="privacy.html">Privacy</a>
+                <a href="#resources">Contact</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
